@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SongActivity"
+    android:background="@color/black">
+    
+    <ImageView
+        android:id="@+id/cover"
+        android:layout_width="320dp"
+        android:layout_height="320dp"
+        android:src="@drawable/ic_launcher_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="76dp"/>
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="WHAT'S POPPIN"
+        android:textSize="24sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/hamon_bold"
+        app:layout_constraintTop_toBottomOf="@id/cover"
+        app:layout_constraintStart_toStartOf="@id/cover"
+        app:layout_constraintEnd_toEndOf="@id/cover"
+        android:layout_marginTop="21dp"/>
+
+    <TextView
+        android:id="@+id/artist"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Jack Harlow"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/hamon"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="@id/cover"
+        app:layout_constraintEnd_toEndOf="@id/cover"
+        android:layout_marginTop="14dp"/>
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/play_container"
+        android:layout_width="130dp"
+        android:layout_height="130dp"
+        android:src="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginBottom="44dp"/>
+
+    <ImageView
+        android:id="@+id/next_container"
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:src="@android:color/transparent"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/play_container"
+        app:layout_constraintStart_toEndOf="@+id/play_container"
+        app:layout_constraintTop_toTopOf="@+id/play_container" />
+
+    <ImageView
+        android:id="@+id/prev_container"
+        android:layout_width="70dp"
+        android:layout_height="90dp"
+        android:src="@android:color/transparent"
+        android:layout_marginRight="32dp"
+        app:layout_constraintBottom_toBottomOf="@+id/play_container"
+        app:layout_constraintEnd_toStartOf="@+id/play_container"
+        app:layout_constraintTop_toTopOf="@+id/play_container" />
+
+    <ImageView
+        android:id="@+id/play"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/play_arrow_48px"
+        android:background="@android:color/transparent"
+        app:tint="@color/black"
+        app:layout_constraintStart_toStartOf="@id/play_container"
+        app:layout_constraintEnd_toEndOf="@id/play_container"
+        app:layout_constraintTop_toTopOf="@id/play_container"
+        app:layout_constraintBottom_toBottomOf="@id/play_container"/>
+
+    <ImageView
+        android:id="@+id/pause"
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/pause_48px"
+        android:background="@android:color/transparent"
+        app:tint="@color/black"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/play_container"
+        app:layout_constraintEnd_toEndOf="@id/play_container"
+        app:layout_constraintTop_toTopOf="@id/play_container"
+        app:layout_constraintBottom_toBottomOf="@id/play_container"/>
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/arrow_forward_ios_48px"
+        android:background="@android:color/transparent"
+        app:tint="@color/white"
+        app:layout_constraintStart_toStartOf="@id/next_container"
+        app:layout_constraintEnd_toEndOf="@id/next_container"
+        app:layout_constraintTop_toTopOf="@id/next_container"
+        app:layout_constraintBottom_toBottomOf="@id/next_container"/>
+
+    <ImageView
+        android:layout_width="56dp"
+        android:layout_height="56dp"
+        android:src="@drawable/arrow_back_ios_48px"
+        android:background="@android:color/transparent"
+        app:tint="@color/white"
+        android:layout_marginLeft="14dp"
+        app:layout_constraintStart_toStartOf="@id/prev_container"
+        app:layout_constraintEnd_toEndOf="@id/prev_container"
+        app:layout_constraintTop_toTopOf="@id/prev_container"
+        app:layout_constraintBottom_toBottomOf="@id/prev_container"/>
+
+    <ProgressBar
+        android:id="@+id/loading2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:progressTint="@color/white"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/cover"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginRight="12dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
